@@ -9,7 +9,7 @@
 </head>
 <body>
     <div class="background"></div>
-    <img src="img/Bird-2.png" alt="bird-img" class="bird" id="bird-1">
+    <img src="img/Bird-2.png" alt="Bird-2.png" class="bird" id="bird-2">
     <div class="message">
         Enter To Start Game <p><span style="color: red;">&uarr;</span> ArrowUp to Control</p>
     </div>
@@ -24,7 +24,7 @@
     <script>
         let move_speed = 3, grativy = 0.5;
 let bird = document.querySelector('.bird');
-let img = document.getElementById('bird-1');
+let img = document.getElementById('bird-2');
 let sound_point = new Audio('sounds effect/point.mp3');
 let sound_die = new Audio('sounds effect/die.mp3');
 
@@ -97,14 +97,14 @@ function play(){
         bird_dy = bird_dy + grativy;
         document.addEventListener('keydown', (e) => {
             if(e.key == 'ArrowUp' || e.key == ' '){
-                img.src = 'images/Bird-2.png';
+                img.src = 'img/Bird-2.png';
                 bird_dy = -7.6;
             }
         });
 
         document.addEventListener('keyup', (e) => {
             if(e.key == 'ArrowUp' || e.key == ' '){
-                img.src = 'images/Bird.png';
+                img.src = 'img/Bird-2.png';
             }
         });
 
